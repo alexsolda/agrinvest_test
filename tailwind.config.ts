@@ -10,8 +10,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        black: {
+          900: 'rgba(0,0,0,1)'
+        },
+        green: 'rgba(2,61,41,1)'
+      },
       fontFamily: {
         nunito: ['var(--font-nunito)'],
+      },
+      backgroundImage: {
+        'custom-radial': 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 45%)',
+      },
+      keyframes: {
+        pulseBG: {
+          '0%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 45%)' },
+          '25%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 44.5%)' },
+          '50%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 44%)' },
+          '75%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 43.5%)' },
+          '100%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 44%)' },
+        },
+      },
+      animation: {
+        pulseBG: 'pulseBG 1.2s infinite ease-in-out',
       },
     },
   },
