@@ -9,9 +9,12 @@ import { ReactElement } from 'react'
 
 import { IoListCircle } from 'react-icons/io5'
 import { TbSquareRoundedPlusFilled } from 'react-icons/tb'
+import { SiGoogleforms } from 'react-icons/si'
+import FormTemplate from '../FormTemplate'
 
 const CardsContainerTemplate = (): ReactElement => {
   const modalIncrement = useDisclosure()
+  const modalForm = useDisclosure()
 
   return (
     <>
@@ -26,6 +29,11 @@ const CardsContainerTemplate = (): ReactElement => {
           Icon={TbSquareRoundedPlusFilled}
           onClick={modalIncrement.onOpen}
         />
+        <CardContainer
+          title="Formulário"
+          Icon={SiGoogleforms}
+          onClick={modalForm.onOpen}
+        />
       </Wrapper>
       <ModalContainer
         isOpen={modalIncrement.isOpen}
@@ -33,6 +41,14 @@ const CardsContainerTemplate = (): ReactElement => {
         title="Contador"
       >
         <Counter />
+      </ModalContainer>
+
+      <ModalContainer
+        isOpen={modalForm.isOpen}
+        onOpenChange={modalForm.onOpenChange}
+        title="Formulário"
+      >
+        <FormTemplate />
       </ModalContainer>
     </>
   )
