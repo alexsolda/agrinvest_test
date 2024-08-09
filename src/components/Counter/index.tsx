@@ -4,7 +4,7 @@ import { ReactElement, useState } from 'react'
 import BtDefault from '../Buttons/BtDefault'
 import { Checkbox } from '@nextui-org/react'
 
-export enum HandleCounterTypes {
+enum HandleCounterTypes {
   plus,
   sub
 }

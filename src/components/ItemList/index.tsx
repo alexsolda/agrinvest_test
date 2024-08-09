@@ -10,7 +10,7 @@ const ItemList = ({ items }: IItemListProps): ReactElement => {
       {items.map((item) => (
         <li
           key={`key-${item}`}
-          className="py-2 list-disc list-inside border-b border-neutral-800"
+          className="py-2 list-disc list-inside border-b border-zinc-400 dark:border-neutral-800"
         >
           {item}
         </li>
