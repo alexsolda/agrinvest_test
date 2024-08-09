@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
-import Header from './components/Header'
+import Header from '../components/Header'
+import Wrapper from '@/components/Wrapper'
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -28,7 +29,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          {children}
+          <Wrapper>{children}</Wrapper>
         </Providers>
       </body>
     </html>
