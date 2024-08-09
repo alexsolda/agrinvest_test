@@ -12,23 +12,30 @@ const config: Config = {
     extend: {
       colors: {
         black: {
-          900: 'rgba(0,0,0,1)'
+          700: '#121214',
+          900: '#0a0a0a'
         },
-        green: 'rgba(2,61,41,1)'
+        green: '#023D29'
       },
       fontFamily: {
         nunito: ['var(--font-nunito)'],
       },
+      maxWidth: {
+        userView: '80rem'
+      },
+      width: {
+        userView: '80rem'
+      },
       backgroundImage: {
-        'custom-radial': 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 45%)',
+        'custom-radial': 'radial-gradient(circle, #023D29 0%, #0a0a0a 45%)',
       },
       keyframes: {
         pulseBG: {
-          '0%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 45%)' },
-          '25%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 44.5%)' },
-          '50%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 44%)' },
-          '75%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 43.5%)' },
-          '100%': { backgroundImage: 'radial-gradient(circle, rgba(2,61,41,1) 0%, rgba(0,0,0,1) 44%)' },
+          '0%': { backgroundImage: 'radial-gradient(circle, #023D29 0%, #0a0a0a 45%)' },
+          '25%': { backgroundImage: 'radial-gradient(circle, #023D29 0%, #0a0a0a 44.5%)' },
+          '50%': { backgroundImage: 'radial-gradient(circle, #023D29 0%, #0a0a0a 44%)' },
+          '75%': { backgroundImage: 'radial-gradient(circle, #023D29 0%, #0a0a0a 43.5%)' },
+          '100%': { backgroundImage: 'radial-gradient(circle, #023D29 0%, #0a0a0a 44%)' },
         },
       },
       animation: {
