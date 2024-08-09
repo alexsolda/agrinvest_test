@@ -7,7 +7,7 @@ const Input = forwardRef<HTMLInputElement, IInputProps>((props, ref) => {
     <input
       type="text"
       ref={ref}
-      className="p-2 rounded-md outline-none border border-neutral-800 focus:border-green"
+      className="p-2 rounded-md outline-none border border-zinc-400 dark:border-neutral-800 focus:border-green"
       {...props}
     />
   )
