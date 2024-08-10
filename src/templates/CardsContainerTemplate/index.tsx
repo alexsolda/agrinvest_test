@@ -7,7 +7,7 @@ import Wrapper from '@/components/Wrapper'
 import { ReactElement, useState } from 'react'
 import FormTemplate from '../FormTemplate'
 
-import { IoListCircle } from 'react-icons/io5'
+import { IoListCircle, IoImages } from 'react-icons/io5'
 import { TbSquareRoundedPlusFilled } from 'react-icons/tb'
 import { SiGoogleforms } from 'react-icons/si'
 import { MdWeb } from 'react-icons/md'
@@ -35,6 +35,11 @@ const CardsContainerTemplate = (): ReactElement => {
           onClick={() => setIsFormModalOpen(true)}
         />
         <CardContainer title="Usuários (SSR)" Icon={MdWeb} href="/usuarios" />
+        <CardContainer
+          title="Artigos (Otimização de imagens)"
+          Icon={IoImages}
+          href="/artigos"
+        />
       </Wrapper>
       <ModalContainer
         isOpen={isCounterModalOpen}

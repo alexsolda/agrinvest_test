@@ -1,5 +1,6 @@
 'use client'
 
+import Spinner from '@/components/Spinner'
 import { useTheme } from '@/context/ThemeContext'
 import React, { ReactElement, useEffect, useState } from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
@@ -11,7 +12,7 @@ const ThemeToggleButton = (): ReactElement => {
   useEffect(() => setIsMounted(true), [])
 
   if (!isMounted) {
-    return <p>carregando</p>
+    return <Spinner />
   }
 
   return (
