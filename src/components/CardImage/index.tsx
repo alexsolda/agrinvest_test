@@ -35,7 +35,7 @@ const CardImage = ({ title, src, alt }: ICardImageProps): ReactElement => {
         <Image
           src={src}
           alt={alt}
-          layout="fill"
+          fill
           objectFit="cover"
           className="rounded-lg"
           placeholder="blur"
