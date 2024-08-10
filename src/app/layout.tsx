@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body
-        className={`${nunito.variable} text-black-900 dark:text-white font-nunito min-h-screen bg-zinc-200 dark:bg-custom-radial dark:animate-pulseBG transition-all`}
+        className={`${nunito.variable} text-black-900 dark:text-white font-nunito min-h-screen bg-zinc-100 dark:bg-custom-radial dark:animate-pulseBG transition-all`}
       >
         <Providers>
           <Header />

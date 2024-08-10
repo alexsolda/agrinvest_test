@@ -6,6 +6,7 @@ import {
   DialogTitle
 } from '@headlessui/react'
 import { ReactElement } from 'react'
+import { IoCloseOutline } from 'react-icons/io5'
 
 type IModalContainerProps = {
   isOpen: boolean
@@ -27,18 +28,23 @@ const ModalContainer = ({
       className="relative z-10 focus:outline-none"
       onClose={onClose}
     >
-      <DialogBackdrop className="fixed inset-0 bg-yellow-300" />
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-md" />
+      <div className="fixed inset-0 z-10 w-screen overflow-y-auto shadow-xl">
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             transition
-            className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+            className="w-full max-w-md rounded-xl bg-white dark:bg-black-700 p-3 duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
           >
             <DialogTitle
-              as="h3"
-              className="flex flex-col gap-1 lg:mx-8 mx-3 mt-6 dark:text-white text-black-900"
+              as="p"
+              className="flex items-center justify-between  gap-1 lg:mx-8 mx-3 mt-6 dark:text-white text-black-900"
             >
-              {title}
+              <p className="text-lg font-bold">{title}</p>
+              <IoCloseOutline
+                size={20}
+                onClick={onClose}
+                className="cursor-pointer"
+              />
             </DialogTitle>
             <div className="lg:p-8 p-3">{children}</div>
           </DialogPanel>

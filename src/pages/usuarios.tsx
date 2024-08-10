@@ -12,7 +12,7 @@ type IUserProps = {
 const Users = ({ initialData }: IUserProps): ReactElement => {
   return (
     <div
-      className={`text-black-900 dark:text-white font-nunito min-h-screen bg-zinc-200 dark:bg-custom-radial dark:animate-pulseBG transition-all`}
+      className={`text-black-900 dark:text-white font-nunito min-h-screen bg-zinc-100 dark:bg-custom-radial dark:animate-pulseBG transition-all`}
     >
       <Header />
       <Wrapper className="mt-6">
