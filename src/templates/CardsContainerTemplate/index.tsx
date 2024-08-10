@@ -6,11 +6,12 @@ import ModalContainer from '@/components/ModalContainer'
 import Wrapper from '@/components/Wrapper'
 import { useDisclosure } from '@nextui-org/react'
 import { ReactElement } from 'react'
+import FormTemplate from '../FormTemplate'
 
 import { IoListCircle } from 'react-icons/io5'
 import { TbSquareRoundedPlusFilled } from 'react-icons/tb'
 import { SiGoogleforms } from 'react-icons/si'
-import FormTemplate from '../FormTemplate'
+import { MdWeb } from 'react-icons/md'
 
 const CardsContainerTemplate = (): ReactElement => {
   const modalIncrement = useDisclosure()
@@ -34,6 +35,7 @@ const CardsContainerTemplate = (): ReactElement => {
           Icon={SiGoogleforms}
           onClick={modalForm.onOpen}
         />
+        <CardContainer title="Usuários (SSR)" Icon={MdWeb} href="/usuarios" />
       </Wrapper>
       <ModalContainer
         isOpen={modalIncrement.isOpen}
