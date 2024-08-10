@@ -1,4 +1,3 @@
-import { Providers } from '@/app/providers'
 import Header from '@/components/Header'
 import Title from '@/components/Typography/Title'
 import Wrapper from '@/components/Wrapper'
@@ -15,23 +14,21 @@ const Users = ({ initialData }: IUserProps): ReactElement => {
     <div
       className={`text-black-900 dark:text-white font-nunito min-h-screen bg-zinc-200 dark:bg-custom-radial dark:animate-pulseBG transition-all`}
     >
-      <Providers>
-        <Header />
-        <Wrapper className="mt-6">
-          <Title text="Listagem de usuários" />
-          <ul className="mt-6 flex flex-col gap-3">
-            {initialData.map((data) => (
-              <div
-                key={data.id}
-                className="flex items-center justify-between gap-12 py-3 border-b border-zinc-400 dark:border-neutral-800"
-              >
-                <p>{data.name}</p>
-                <p>{data.email}</p>
-              </div>
-            ))}
-          </ul>
-        </Wrapper>
-      </Providers>
+      <Header />
+      <Wrapper className="mt-6">
+        <Title text="Listagem de usuários" />
+        <ul className="mt-6 flex flex-col gap-3">
+          {initialData.map((data) => (
+            <div
+              key={data.id}
+              className="flex items-center justify-between gap-12 py-3 border-b border-zinc-400 dark:border-neutral-800"
+            >
+              <p>{data.name}</p>
+              <p>{data.email}</p>
+            </div>
+          ))}
+        </ul>
+      </Wrapper>
     </div>
   )
 }
