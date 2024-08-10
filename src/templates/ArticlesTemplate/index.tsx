@@ -1,7 +1,6 @@
 import CardImage from '@/components/CardImage'
 import Wrapper from '@/components/Wrapper'
 import { imagesData } from '@/utils/imagesData'
-import Image from 'next/image'
 
 const ArticlesTemplate = async () => {
   return (
