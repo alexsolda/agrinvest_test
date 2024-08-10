@@ -1,7 +1,6 @@
 'use client'
 
 import { useTheme } from '@/context/ThemeContext'
-import { Spinner } from '@nextui-org/react'
 import React, { ReactElement, useEffect, useState } from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
 
@@ -12,7 +11,7 @@ const ThemeToggleButton = (): ReactElement => {
   useEffect(() => setIsMounted(true), [])
 
   if (!isMounted) {
-    return <Spinner size="sm" />
+    return <p>carregando</p>
   }
 
   return (
