@@ -4,7 +4,6 @@ import CardContainer from '@/components/CardContainer'
 import Counter from '@/components/Counter'
 import ModalContainer from '@/components/ModalContainer'
 import Wrapper from '@/components/Wrapper'
-import { useDisclosure } from '@nextui-org/react'
 import { ReactElement } from 'react'
 import FormTemplate from '../FormTemplate'
 
@@ -14,8 +13,8 @@ import { SiGoogleforms } from 'react-icons/si'
 import { MdWeb } from 'react-icons/md'
 
 const CardsContainerTemplate = (): ReactElement => {
-  const modalIncrement = useDisclosure()
-  const modalForm = useDisclosure()
+  // const modalIncrement = useDisclosure()
+  // const modalForm = useDisclosure()
 
   return (
     <>
@@ -28,16 +27,16 @@ const CardsContainerTemplate = (): ReactElement => {
         <CardContainer
           title="Incrementador"
           Icon={TbSquareRoundedPlusFilled}
-          onClick={modalIncrement.onOpen}
+          // onClick={modalIncrement.onOpen}
         />
         <CardContainer
           title="Formulário"
           Icon={SiGoogleforms}
-          onClick={modalForm.onOpen}
+          // onClick={modalForm.onOpen}
         />
         <CardContainer title="Usuários (SSR)" Icon={MdWeb} href="/usuarios" />
       </Wrapper>
-      <ModalContainer
+      {/* <ModalContainer
         isOpen={modalIncrement.isOpen}
         onOpenChange={modalIncrement.onOpenChange}
         title="Contador"
@@ -51,7 +50,7 @@ const CardsContainerTemplate = (): ReactElement => {
         title="Formulário"
       >
         <FormTemplate />
-      </ModalContainer>
+      </ModalContainer> */}
     </>
   )
 }

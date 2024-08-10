@@ -2,7 +2,6 @@
 
 import { ReactElement, useState } from 'react'
 import BtDefault from '../Buttons/BtDefault'
-import { Checkbox } from '@nextui-org/react'
 
 enum HandleCounterTypes {
   plus,
@@ -49,14 +48,14 @@ const Counter = (): ReactElement => {
           onClick={() => handleCounter(HandleCounterTypes.plus)}
         />
       </div>
-      <Checkbox
+      {/* <Checkbox
         color="default"
         radius="lg"
         isSelected={allowNegatives}
         onClick={() => handleAllowNegatives()}
       >
         Permitir valores negativos.
-      </Checkbox>
+      </Checkbox> */}
     </div>
   )
 }
