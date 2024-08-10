@@ -2,6 +2,7 @@
 
 import { ReactElement, useState } from 'react'
 import BtDefault from '../Buttons/BtDefault'
+import { Checkbox, Field, Label } from '@headlessui/react'
 
 enum HandleCounterTypes {
   plus,
@@ -48,14 +49,27 @@ const Counter = (): ReactElement => {
           onClick={() => handleCounter(HandleCounterTypes.plus)}
         />
       </div>
-      {/* <Checkbox
-        color="default"
-        radius="lg"
-        isSelected={allowNegatives}
-        onClick={() => handleAllowNegatives()}
-      >
-        Permitir valores negativos.
-      </Checkbox> */}
+      <Field className="flex items-center gap-2">
+        <Checkbox
+          checked={allowNegatives}
+          onClick={() => handleAllowNegatives()}
+          className="group block size-4 rounded border bg-white dark:bg-black-900 data-[checked]:bg-green"
+        >
+          <svg
+            className="stroke-white opacity-0 group-data-[checked]:opacity-100"
+            viewBox="0 0 14 14"
+            fill="none"
+          >
+            <path
+              d="M3 8L6 11L11 3.5"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Checkbox>
+        <Label>Permitir valores negativos</Label>
+      </Field>
     </div>
   )
 }
