@@ -4,7 +4,7 @@ import CardContainer from '@/components/CardContainer'
 import Counter from '@/components/Counter'
 import ModalContainer from '@/components/ModalContainer'
 import Wrapper from '@/components/Wrapper'
-import { ReactElement } from 'react'
+import { ReactElement, useState } from 'react'
 import FormTemplate from '../FormTemplate'
 
 import { IoListCircle } from 'react-icons/io5'
@@ -13,8 +13,8 @@ import { SiGoogleforms } from 'react-icons/si'
 import { MdWeb } from 'react-icons/md'
 
 const CardsContainerTemplate = (): ReactElement => {
-  // const modalIncrement = useDisclosure()
-  // const modalForm = useDisclosure()
+  const [isCounterModalOpen, setIsCounterModalOpen] = useState(false)
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false)
 
   return (
     <>
@@ -27,30 +27,30 @@ const CardsContainerTemplate = (): ReactElement => {
         <CardContainer
           title="Incrementador"
           Icon={TbSquareRoundedPlusFilled}
-          // onClick={modalIncrement.onOpen}
+          onClick={() => setIsCounterModalOpen(true)}
         />
         <CardContainer
           title="Formulário"
           Icon={SiGoogleforms}
-          // onClick={modalForm.onOpen}
+          onClick={() => setIsFormModalOpen(true)}
         />
         <CardContainer title="Usuários (SSR)" Icon={MdWeb} href="/usuarios" />
       </Wrapper>
-      {/* <ModalContainer
-        isOpen={modalIncrement.isOpen}
-        onOpenChange={modalIncrement.onOpenChange}
+      <ModalContainer
+        isOpen={isCounterModalOpen}
+        onClose={() => setIsCounterModalOpen(false)}
         title="Contador"
       >
         <Counter />
       </ModalContainer>
 
       <ModalContainer
-        isOpen={modalForm.isOpen}
-        onOpenChange={modalForm.onOpenChange}
+        isOpen={isFormModalOpen}
+        onClose={() => setIsFormModalOpen(false)}
         title="Formulário"
       >
         <FormTemplate />
-      </ModalContainer> */}
+      </ModalContainer>
     </>
   )
 }
