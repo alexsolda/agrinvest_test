@@ -5,7 +5,7 @@ import { Providers } from './providers'
 import Header from '../components/Header'
 import Wrapper from '@/components/Wrapper'
 
-export const nunito = Nunito({
+const nunito = Nunito({
   subsets: ['latin'],
   variable: '--font-nunito',
   weight: ['200', '600']
