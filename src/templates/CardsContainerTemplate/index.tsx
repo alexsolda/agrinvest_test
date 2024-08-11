@@ -11,6 +11,7 @@ import { IoListCircle, IoImages } from 'react-icons/io5'
 import { TbSquareRoundedPlusFilled } from 'react-icons/tb'
 import { SiGoogleforms } from 'react-icons/si'
 import { MdWeb } from 'react-icons/md'
+import { HiMiniClipboardDocumentList } from 'react-icons/hi2'
 
 const CardsContainerTemplate = (): ReactElement => {
   const [isCounterModalOpen, setIsCounterModalOpen] = useState(false)
@@ -39,6 +40,11 @@ const CardsContainerTemplate = (): ReactElement => {
           title="Artigos (Otimização de imagens)"
           Icon={IoImages}
           href="/artigos"
+        />
+        <CardContainer
+          title="Listagem refatorada (Complexidade)"
+          Icon={HiMiniClipboardDocumentList}
+          href="/listagem-crud"
         />
       </Wrapper>
       <ModalContainer
