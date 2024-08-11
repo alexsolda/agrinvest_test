@@ -19,7 +19,7 @@ const BtDefault = ({
           : 'bg-green border-2 border-transparent'
       } disabled:opacity-60 disabled:cursor-not-allowed active:scale-95 hover:scale-105 rounded-md min-w-[150px] py-2 text-white transition`}
     >
-      {title}
+      <p className={outlined ? 'text-green font-bold' : ''}>{title}</p>
     </button>
   )
 }
