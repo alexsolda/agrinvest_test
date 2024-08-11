@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import Title from '@/components/Typography/Title'
 import Wrapper from '@/components/Wrapper'
-import { IUserData } from '@/hooks/useUsers'
+import { fetchUsers, IUserData } from '@/hooks/useUsers'
 import { GetServerSideProps } from 'next'
 import { ReactElement } from 'react'
 
@@ -34,17 +34,7 @@ const Users = ({ initialData }: IUserProps): ReactElement => {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/users')
-
-  if (!response.ok) {
-    return {
-      props: {
-        initialData: []
-      }
-    }
-  }
-
-  const initialData: IUserData[] = await response.json()
+  const initialData = await fetchUsers()
 
   return {
     props: {
