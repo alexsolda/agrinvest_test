@@ -57,7 +57,7 @@
 
 Os componentes do layout e sua documentação esão disponíveis no Storybook:
 
-- [Storybook](https://668369773fa1adfcb7f4538b-axmdfafgtv.chromatic.com/)
+- [Storybook](https://66b8faf9a6e186daad9df78c-hbjpxmccee.chromatic.com/)
 
 ---
 
